@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2) do
 
   create_table "comments", force: true do |t|
-    t.string   "user"
-    t.text     "comment"
+    t.text     "comment_txt"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "pin_id"
   end
 
   create_table "pins", force: true do |t|
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
